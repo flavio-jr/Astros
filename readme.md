@@ -4,5 +4,9 @@
 
 Open Source Project for Event Management for Scientific Entities
 
+## How to contribute  
+
+Basically, we recommend reading the following article:
+[Contributing to open source](Https://guides.github.com/activities/contributing-to-open-source/)
 
 
