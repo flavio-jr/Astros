@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "1fabiosoares/sculptor",
-            "version": "0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/1fabiosoares/sculptor.git",
-                "reference": "05b715039f3725c48ed9b1fe8460cd5a146078be"
+                "reference": "5c1e3f7ecffc13d89040f438b4532296d87f8415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/1fabiosoares/sculptor/zipball/05b715039f3725c48ed9b1fe8460cd5a146078be",
-                "reference": "05b715039f3725c48ed9b1fe8460cd5a146078be",
+                "url": "https://api.github.com/repos/1fabiosoares/sculptor/zipball/5c1e3f7ecffc13d89040f438b4532296d87f8415",
+                "reference": "5c1e3f7ecffc13d89040f438b4532296d87f8415",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "description": "The future web experience in CSS",
-            "time": "2017-01-13 23:54:09"
+            "time": "2017-01-14 21:12:03"
         },
         {
             "name": "classpreloader/classpreloader",
