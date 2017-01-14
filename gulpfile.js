@@ -1,7 +1,5 @@
 const elixir = require('laravel-elixir');
 
-require('laravel-elixir-vue-2');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,7 +11,17 @@ require('laravel-elixir-vue-2');
  |
  */
 
-elixir((mix) => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+elixir(function(mix){
+    mix.copy('vendor/1fabiosoares/sculptor/css/sculptor.min.css', 'public/css');
+    mix.copy('vendor/1fabiosoares/sculptor/css/sculptor.min.css', 'public/css');
+
+    mix.sass([
+        'app.scss'
+    ], 'public/css');
+
+    mix.sass([
+        'home.scss'
+    ], 'public/css/home.css');
+
+    mix.copy('resources/assets/images/cover.jpg', 'public/images');
 });

@@ -1,0 +1,100 @@
+html {
+  background: url("../images/cover.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header > h1 {
+  font-weight: 500;
+  color: #ffffff;
+  p {
+    font-weight: 400;
+  }
+}
+
+footer {
+  border-bottom: 0px;
+  div {
+    p {
+      padding-top: 5px;
+    }
+
+    padding-bottom: 5px;
+  }
+}
+
+.navHeader {
+  u {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+  }
+
+  u > li {
+    float: left;
+
+    a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+
+    a:hover {
+      background-color: #5e5e5e;
+    }
+
+    .icon {
+      display: none;
+    };
+  }
+}
+
+@media screen and (max-width:680px){
+  navHeader > li:not(:first-child){
+    display: none;
+  }
+
+  navHeader > li .icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px){
+  navHeader {
+    ul.responsive {
+      position: relative;
+    }
+
+    ul.responsive > li .icon{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    ul.responsive li{
+      float: none;
+      display: inline;
+      a {
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.niceMarryDarkReview {
+  background-color: black;
+  background: -webkit-linear-gradient(135deg, #101010, #5e5e5e);
+  background: -moz-linear-gradient(135deg, #101010, #5e5e5e);
+  background: -o-linear-gradient(135deg, #101010, #5e5e5e);
+  background: linear-gradient(135deg, #101010, #5e5e5e);
+}
