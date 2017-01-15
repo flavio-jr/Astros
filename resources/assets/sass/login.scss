@@ -1,0 +1,26 @@
+html {
+  background: url("../images/cover.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header > h1 {
+  font-weight: 500;
+  color: #ffffff;
+  p {
+    font-weight: 400;
+  }
+}
+
+.loginForm {
+  margin-right: 10px;
+
+  div {
+    button {
+      alignment: center;
+      align-self: center;
+    }
+  }
+}

@@ -23,5 +23,9 @@ elixir(function(mix){
         'home.scss'
     ], 'public/css/home.css');
 
+    mix.sass([
+        'login.scss'
+    ], 'public/css/login.css');
+
     mix.copy('resources/assets/images/cover.jpg', 'public/images');
 });

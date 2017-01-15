@@ -17,14 +17,14 @@
 <nav class="navHeader">
     <ul class="textCenter">
         <li>
-            <button class="button blur">Login</button>
+            <button class="button blur"><a href="{{ route('login') }}">Login</a></button>
         </li>
     </ul>
 </nav>
 <div class="screenHeight aligner">
     <header class="container textCenter textWhite">
         <h1>Astros</h1>
-        <p>Welcome to the Scientific's Event Management system.</p>
+        <p>@lang('astros.description')</p>
     </header>
 </div>
 <footer class="niceMarryDarkReview textWhite center textCenter">

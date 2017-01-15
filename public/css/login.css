@@ -1,0 +1,25 @@
+html {
+  background: url("../images/cover.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+header > h1 {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+header > h1 p {
+  font-weight: 400;
+}
+
+.loginForm {
+  margin-right: 10px;
+}
+
+.loginForm div button {
+  alignment: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+/*# sourceMappingURL=login.css.map */

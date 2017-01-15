@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'failed' => 'As credenciais informadas não correspondem com nossos registros.',
-    'throttle' => 'Você tentou fazer login muitas vezes. Por favor, tente novamente em :seconds segundos.',
-
+    'failed'    => 'As credenciais informadas não correspondem com nossos registros.',
+    'throttle'  => 'Você tentou fazer login muitas vezes. Por favor, tente novamente em :seconds segundos.',
+    'email'     => 'Digite seu email',
+    'password'  => 'Digite seu senha',
+    'signin'    => 'Entrar'
 ];
