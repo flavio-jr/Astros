@@ -1,0 +1,94 @@
+html {
+  background: url("../images/cover.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+header > h1 {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+header > h1 p {
+  font-weight: 400;
+}
+
+footer {
+  border-bottom: 0px;
+}
+
+footer div {
+  padding-bottom: 5px;
+}
+
+footer div p {
+  padding-top: 5px;
+}
+
+.navHeader u {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.navHeader u > li {
+  float: left;
+}
+
+.navHeader u > li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.navHeader u > li a:hover {
+  background-color: #5e5e5e;
+}
+
+.navHeader u > li .icon {
+  display: none;
+}
+
+@media screen and (max-width: 680px) {
+  navHeader > li:not(:first-child) {
+    display: none;
+  }
+  navHeader > li .icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  navHeader ul.responsive {
+    position: relative;
+  }
+  navHeader ul.responsive > li .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  navHeader ul.responsive li {
+    float: none;
+    display: inline;
+  }
+  navHeader ul.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+.niceMarryDarkReview {
+  background-color: black;
+  background: -webkit-linear-gradient(135deg, #101010, #5e5e5e);
+  background: -webkit-linear-gradient(315deg, #101010, #5e5e5e);
+  background: linear-gradient(135deg, #101010, #5e5e5e);
+}
+
+/*# sourceMappingURL=welcome.css.map */
