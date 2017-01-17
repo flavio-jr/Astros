@@ -17,4 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/astros', 'HomeController@index');
+
+
+/*
+ * Astros web site routes
+ * */
+
+Route::group(['namespace' => 'Site'], function (){
+   Route::get('home', 'SiteController@index');
+});

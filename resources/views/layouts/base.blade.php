@@ -22,9 +22,8 @@
         <label for="control-nav" class="controlNavClosed"></label>
         <nav class="navElementRight" role="navigation">
             <ul class="listAuto">
-                <li><a href="#" title="Element">Element</a></li>
-                <li><a href="#" title="Element">Element</a></li>
-                <li><a href="#" title="Element">Element</a></li>
+                <li><a href="#">@lang('astros.menu.events')</a></li>
+                <li><a href="#">@lang('astros.menu.publications')</a></li>
                 @if(Auth::guest())
                     <li class="authElement"><a href="{{ url('login') }}">Login</a></li>
                 @else

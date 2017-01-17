@@ -7,5 +7,10 @@
 return [
     'description' => "Welcome to the Scientific's Event Management system.",
     'shortdescription' => "Scientific's Event Management system.",
-    'distributed' => "Astros is distributed under license "
+    'distributed' => "Astros is distributed under license ",
+
+    'menu' => [
+        'events' => 'Events',
+        'publications' => 'Publications'
+    ]
 ];

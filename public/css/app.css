@@ -26,9 +26,6 @@
   header li a {
     padding: 15px 10px;
   }
-  header li a:hover {
-    background-color: #ccc;
-  }
   .authElement {
     border-left: none;
   }
@@ -41,9 +38,6 @@
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
     font-weight: 400;
-  }
-  .authElement a:hover {
-    color: #333;
   }
   .controlNav {
     /* label icon */
@@ -212,10 +206,6 @@ header li a {
   font-weight: 400;
 }
 
-header li a:hover {
-  color: #333;
-}
-
 header li:first-child {
   border: none;
 }
@@ -262,10 +252,6 @@ section:after {
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   font-weight: 400;
-}
-
-.authElement a:hover {
-  color: #333;
 }
 
 /*# sourceMappingURL=app.css.map */
