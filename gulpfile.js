@@ -20,8 +20,12 @@ elixir(function(mix){
     ], 'public/css');
 
     mix.sass([
-        'home.scss'
-    ], 'public/css/home.css');
+        'welcome.scss'
+    ], 'public/css/welcome.css');
+
+    mix.sass([
+        'login.scss'
+    ], 'public/css/login.css');
 
     mix.copy('resources/assets/images/cover.jpg', 'public/images');
 });

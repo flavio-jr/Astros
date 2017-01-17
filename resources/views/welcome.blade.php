@@ -11,29 +11,22 @@
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{ url('css/sculptor.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url('css/home.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/welcome.css')}}">
 </head>
 <body>
-<nav class="navHeader">
-    <ul class="textCenter">
-        <li>
-            <button class="button blur">Login</button>
-        </li>
-    </ul>
-</nav>
-<div class="screenHeight aligner">
-    <header class="container textCenter textWhite">
+<div class="screenHeight aligner flexRow">
+    <header class="container textCenter textWhite column s12 m12 l12">
         <h1>Astros</h1>
-        <p>Welcome to the Scientific's Event Management system.</p>
+        <p>@lang('astros.shortdescription')</p>
+        <button class="button blur"><a href="{{ route('login') }}">Login</a></button>
     </header>
 </div>
-<footer class="niceMarryDarkReview textWhite center textCenter">
-    <div class="container">
-        <p>Astros <a href="#" target="_blank">GPL-3.0</a> Licence.</p>
-        <a href="https://github.com/codespinsolutions/Astros" target="_blank" class="button blur">
-            Github
-        </a>
+<div class="grid">
+    <div class="column s12 m12 l12 textCenter">
+        <p class="textWhite">@lang('astros.distributed')
+            <a href="https://github.com/codespinsolutions/Astros/blob/master/LICENSE">AGLP 3.0</a>
+        </p>
     </div>
-</footer>
+</div>
 </body>
 </html>

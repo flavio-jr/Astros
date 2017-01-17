@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Astros',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt-BR',
 
     /*
     |--------------------------------------------------------------------------
@@ -178,6 +178,10 @@ return [
         Astros\Providers\EventServiceProvider::class,
         Astros\Providers\RouteServiceProvider::class,
 
+        /*
+         * Extra providers
+         */
+        Gbrock\Table\Providers\TableServiceProvider::class
     ],
 
     /*
@@ -225,7 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Table' => Gbrock\Table\Facades\Table::class
     ],
 
 ];

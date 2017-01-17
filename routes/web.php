@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/astros', 'HomeController@index');
+
+
+/*
+ * Astros web site routes
+ * */
+
+Route::group(['namespace' => 'Site'], function (){
+   Route::get('home', 'SiteController@index');
+});
