@@ -3,14 +3,18 @@
 namespace Core\Repository;
 
 use Core\Model\Model;
+use Core\Repository\Contracts\RepositoryInterface;
+use Core\Repository\Traits\PaginateRequestHelper;
 
 /**
  * Repository class
  * Class Repository
  * @package Core\Repository
  */
-abstract class Repository
+class Repository implements RepositoryInterface
 {
+    use PaginateRequestHelper;
+
     protected $model;
 
     public function __construct(Model $model)
@@ -18,29 +22,50 @@ abstract class Repository
         $this->model = $model;
     }
 
-    public function find($id)
+    /**
+     * Returns a single record
+     * @param $id
+     * @return mixed
+     */
+    public function get($id)
     {
         return $this->model->find($id);
     }
 
-    public function create(array $data)
+    /**
+     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     */
+    public function getAll()
     {
-        return $this->model->create($data);
+        return $this->model->all();
     }
 
+    /**
+     * @param array $data
+     * @return bool
+     */
+    public function save(array $data)
+    {
+        return $this->model->save($data);
+    }
+
+    /**
+     * @param $id
+     * @param array $data
+     * @return mixed
+     */
     public function update($id, array $data)
     {
-        return $this->model->where($this->model->getPrimaryKey(), '=', $id)->update($data);
+        return $this->model->where($this->model->getKeyName(), '=', $id)->update($data);
     }
 
+    /**
+     * @param $id
+     * @return int
+     */
     public function delete($id)
     {
         return $this->model->destroy($id);
-    }
-
-    public function all()
-    {
-        return $this->model->all();
     }
 
     public function lists($identifier, $field)
@@ -48,8 +73,17 @@ abstract class Repository
         return $this->model->pluck($field, $identifier);
     }
 
-    private function paginate($sort = null, $search = null)
+    /**
+     * Paginate a given request
+     * @param array|null $request
+     * @param int $take
+     * @return mixed
+     */
+    public function paginate(array $request = null, $take = 10)
     {
+        $sort = is_null($request) ? null : $this->sortArray($request);
+        $search = is_null($request) ? null : $this->searchArray($request, $this->model->searchable());
+
         $result = $this->model;
 
         if(!empty($search)){
@@ -68,35 +102,15 @@ abstract class Repository
             $result = $result->orderBy($sort['field'], $sort['sort']);
         }
 
-        return $result->paginate(10);
+        return $result->paginate($take);
     }
 
 
-    public function paginateRequest(array $parameters = null)
-    {
-        $sort = [];
-        if (!empty($requestParameters['field']) and !empty($requestParameters['sort'])) {
-            $sort = [
-                'field' => $requestParameters['field'],
-                'sort' => $requestParameters['sort']
-            ];
-        }
-
-        $searchable = $this->model->searchable();
-        $search = [];
-        foreach ($requestParameters as $key => $value) {
-            if (array_key_exists($key, $searchable) and !empty($value)) {
-                $search[] = [
-                    'field' => $key,
-                    'type' => $searchable[$key],
-                    'term' => $value
-                ];
-            }
-        }
-        return $this->paginate($sort, $search);
-    }
-
-    public function getFillableModelFields()
+    /**
+     * Model fillable fields
+     * @return array
+     */
+    public function getFillableFields()
     {
         return $this->model->getFillable();
     }

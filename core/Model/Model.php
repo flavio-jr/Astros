@@ -21,14 +21,4 @@ abstract class Model extends BaseModel
     {
         parent::boot();
     }
-
-    public function getPrimaryKey()
-    {
-        return $this->primaryKey;
-    }
-
-    public function getTable()
-    {
-        return $this->table;
-    }
 }
